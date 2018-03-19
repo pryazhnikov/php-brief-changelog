@@ -4,6 +4,24 @@
 
 ### 30 Nov 2017: PHP 7.2.0 was released
 
+#### Added
+* A new type, `object`, has been introduced that can be used for (contravariant) parameter typing and (covariant) return typing of any objects.
+
+#### Changed
+* Parameter types from overridden methods and from interface implementations may now be omitted.
+* Abstract methods can now be overridden when an abstract class extends another abstract class
+* Shared extensions no longer require their file extension (.so for Unix or .dll for Windows) to be specified. This is enabled in the php.ini file, as well as in the `dl()` function.
+* The MCrypt extension has now been moved out of the core to PECL. Given the mcrypt library has not seen any updates since 2007, its usage is highly discouraged. Instead, either the [OpenSSL](http://php.net/manual/en/book.openssl.php) or [Sodium](http://php.net/manual/en/book.sodium.php) extension should be used.
+* Unquoted strings that are non-existent global constants are taken to be strings of themselves. This behaviour used to emit an E_NOTICE, but will now emit an E_WARNING. In the next major version of PHP, an Error exception will be thrown instead.
+
+#### Deprecated
+* The `__autoload()` method has been deprecated because it is inferior to `spl_autoload_register()` 
+* Given the security issues of `create_function()` function, this dated function has been deprecated. The preferred alternative is to use anonymous functions.
+* `each()` function is far slower at iteration than a normal foreach, and causes implementation issues for some language changes. It has therefore been deprecated.
+
+#### Removed
+* The `sql.safe_mode` ini setting has now been removed.
+
 ### 01 Dec 2016: PHP 7.1.0 was released
 
 ### 21 Jul 2016: the end of life date for PHP 5.5
