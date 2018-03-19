@@ -24,6 +24,28 @@
 
 ### 01 Dec 2016: PHP 7.1.0 was released
 
+#### Added
+* A `void` return type has been introduced. Functions declared with void as their return type must either omit their return statement altogether, or use an empty return statement. NULL is not a valid return value for a void function.
+* Support for specifying the visibility of class constants has been added.
+* A new pseudo-type (similar to callable) called *iterable* has been introduced. It may be used in parameter and return types, where it accepts either arrays or objects that implement the Traversable interface.
+* Multiple exceptions per catch block may now be specified using the pipe character (`|`). This is useful for when different exceptions from different class hierarchies are handled the same.
+* A new function called `pcntl_async_signals()` has been introduced to enable asynchronous signal handling without using ticks.
+* Adding new `is_iterable` function.
+
+#### Changed
+* Type declarations for parameters and return values can now be marked as *nullable* by prefixing the type name with a question mark. This signifies that as well as the specified type, NULL can be passed as an argument, or returned as a value, respectively.
+* The shorthand array syntax (`[]`) may now be used to destructure arrays for assignments (including within *foreach*), as an alternative to the existing `list()` syntax, which is still supported.
+* Variables bound to a closure via the use construct cannot use the same name as any superglobals, `$this`, or any parameter.
+* You can now specify keys in `list()`, or its new shorthand `[]` syntax. This enables destructuring of arrays with non-integer or non-sequential keys.
+* Support for negative string offsets has been added to the string manipulation functions accepting offsets, as well as to string indexing with `[]` or `{}`. In such cases, a negative offset is interpreted as being an offset from the end of the string.
+* Previously, a warning would be emitted for invoking *user-defined functions with too few arguments*. Now, this warning has been promoted to an Error exception. This change only applies to user-defined functions, not internal functions.
+* `void` and `iterable` cannot be used to name classes, interfaces, or traits.
+* Applying the empty index operator to a string (e.g. `$str[] = $x`) throws a fatal error instead of converting silently to array.
+* Session IDs will no longer be hashed upon generation. With this change brings about the removal of the following four ini settings: `session.entropy_file`, `session.entropy_length`, `session.hash_function`, `session.hash_bits_per_character`.
+
+#### Fixed
+* `DateTime` and `DateTimeImmutable` now properly incorporate microseconds when constructed from the current time, either explicitly or with a relative string (e.g. "first day of next month"). This means that naive comparisons of two newly created instances will now more likely return FALSE instead of TRUE.
+
 ### 21 Jul 2016: the end of life date for PHP 5.5
 
 PHP 5.5 became an unsupported branch. The last release was 5.5.37.
