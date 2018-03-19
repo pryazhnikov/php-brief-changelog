@@ -52,6 +52,31 @@ PHP 5.5 became an unsupported branch. The last release was 5.5.37.
 
 ### 03 Dec 2015: PHP 7.0.0 was released
 
+#### Added
+* PHP 7 adds support for *return type declarations*
+* The null coalescing operator (`??`) has been added as syntactic sugar for the common case of needing to use a ternary in conjunction with `isset()`
+* The spaceship operator is used for comparing two expressions. It returns -1, 0 or 1 when `$a` is respectively less than, equal to, or greater than `$b`.
+* Support for anonymous classes has been added via `new class`.
+
+#### Changed
+* Array constants can now be defined with `define()`. In PHP 5.6, they could only be defined with `const`.
+* Filtered `unserialize()`
+* `list()` can no longer unpack string variables. `str_split()` should be used instead.
+* `dirname()` now optionally takes a second parameter, **depth**, to get the name of the directory depth levels up from the current directory.
+* `setlocale()` function no longer accepts category passed as string. `LC_*` constants must be used instead.
+* FPM SAPI module: In PHP 5, a listen directive with only a port number would listen on all interfaces, but only on IPv4. PHP 7 will now accept requests made via both IPv4 and IPv6.
+
+#### Deprecated
+* PHP 4 style constructors (methods that have the same name as the class they are defined in) are deprecated, and will be removed in the future.
+* Static calls to methods that are not declared static are deprecated, and may be removed in the future.
+* The `salt` option for the `password_hash()` function has been deprecated to prevent developers from generating their own (usually insecure) salts. The function itself generates a cryptographically secure salt when no salt is provided by the developer - therefore custom salt generation should not be needed.
+
+#### Removed
+* Removed extensions: `ereg`, `mssql`, `mysql`.
+* Removed SAPIs: `apache`, `apache_hooks`, `apache2filter`, etc
+* Removal of date.timezone Warning
+> Previously, a warning was emitted if the date.timezone INI setting had not been set prior to using any date- or time-based functions. Now, this warning has been removed (with date.timezone still defaulting to UTC).
+
 ### 03 Sep 2015: the end of life date for PHP 5.4
 
 PHP 5.4 became an unsupported branch. The last release was 5.4.45.
