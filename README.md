@@ -1,8 +1,10 @@
 # PHP Changes Timeline
 
+A brief overview of PHP language changes using [keep a changelog](http://keepachangelog.com/en/1.0.0/) principles.
+
 ## Changelog
 
-### 30 Nov 2017: PHP 7.2.0 was released
+### 2017-11-30: PHP 7.2.0 was released
 
 #### Added
 * A new type, `object`, has been introduced that can be used for (contravariant) parameter typing and (covariant) return typing of any objects.
@@ -22,7 +24,7 @@
 #### Removed
 * The `sql.safe_mode` ini setting has now been removed.
 
-### 01 Dec 2016: PHP 7.1.0 was released
+### 2016-12-01: PHP 7.1.0 was released
 
 #### Added
 * A `void` return type has been introduced. Functions declared with void as their return type must either omit their return statement altogether, or use an empty return statement. NULL is not a valid return value for a void function.
@@ -46,11 +48,11 @@
 #### Fixed
 * `DateTime` and `DateTimeImmutable` now properly incorporate microseconds when constructed from the current time, either explicitly or with a relative string (e.g. "first day of next month"). This means that naive comparisons of two newly created instances will now more likely return FALSE instead of TRUE.
 
-### 21 Jul 2016: the end of life date for PHP 5.5
+### 2016-07-21: the end of life date for PHP 5.5
 
 PHP 5.5 became an unsupported branch. The last release was 5.5.37.
 
-### 03 Dec 2015: PHP 7.0.0 was released
+### 2015-12-03: PHP 7.0.0 was released
 
 #### Added
 * PHP 7 adds support for *return type declarations*
@@ -77,43 +79,43 @@ PHP 5.5 became an unsupported branch. The last release was 5.5.37.
 * Removal of date.timezone Warning
 > Previously, a warning was emitted if the date.timezone INI setting had not been set prior to using any date- or time-based functions. Now, this warning has been removed (with date.timezone still defaulting to UTC).
 
-### 03 Sep 2015: the end of life date for PHP 5.4
+### 2015-09-03: the end of life date for PHP 5.4
 
 PHP 5.4 became an unsupported branch. The last release was 5.4.45.
 
-### 28 Aug 2014: PHP 5.6.0 was released
+### 2014-08-28: PHP 5.6.0 was released
 
-### 14 Aug 2014: the end of life date for PHP 5.3
+### 2014-08-14: the end of life date for PHP 5.3
 
 PHP 5.3 became an unsupported branch. The last release was 5.3.29.
 
-### 20 Jun 2013: PHP 5.5.0 was released
+### 2013-06-20: PHP 5.5.0 was released
 
-### 01 Mar 2012: PHP 5.4.0 was released
+### 2012-03-01: PHP 5.4.0 was released
 
-### 06 Jan 2011: the end of life date for PHP 5.2
+### 2011-01-06: the end of life date for PHP 5.2
 
 PHP 5.2 became an unsupported branch. The last release was 5.2.17.
 
-### 30 Jun 2009: PHP 5.3.0 was released
+### 2009-06-30: PHP 5.3.0 was released
 
-### 07 Aug 2008: the end of life date for 4.4
+### 2008-08-07: the end of life date for 4.4
 
 The end of life for PHP 4.4 also marks the end of life for PHP 4 as a whole.
 
-### 02 Nov 2006: PHP 5.2.0 was released
+### 2006-11-02: PHP 5.2.0 was released
 
-### 24 Aug 2006: the end of life date for PHP 5.1 
+### 2006-08-24: the end of life date for PHP 5.1 
 
 PHP 5.1 became an unsupported branch. The last release was 5.1.6.
 
-### 24 Nov 2005: PHP 5.1.0 was released
+### 2005-11-24: PHP 5.1.0 was released
 
-### 05 Sep 2005: the end of life date for PHP 5.0
+### 2005-09-05: the end of life date for PHP 5.0
 
 PHP 5.0 became an unsupported branch. The last release was 5.0.5.
 
-### 13 Jul 2004: PHP 5.0.0 was released
+### 2004-07-13: PHP 5.0.0 was released
 
 ## Data Sources
 
