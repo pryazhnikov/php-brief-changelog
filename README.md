@@ -1,6 +1,8 @@
-# PHP Changes Timeline
+# PHP Brief Changelog
 
 A brief overview of PHP language changes using [keep a changelog](http://keepachangelog.com/en/1.0.0/) principles.
+
+The main goal of this project is to build the changes summary of PHP language.
 
 ## Changelog
 
