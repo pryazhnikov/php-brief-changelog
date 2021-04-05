@@ -6,6 +6,31 @@ The main goal of this project is to build the changes summary of PHP language.
 
 ## Changelog
 
+### 2020-11-30: the end of life date for PHP 7.2
+
+PHP 7.2 became an unsupported branch. The last release was 7.2.34.
+
+### 2020-11-26: PHP 8.0.0 was released
+
+
+### 2019-12-01: the end of life date for PHP 7.1
+
+PHP 7.1 became an unsupported branch. The last release was 7.1.33.
+
+### 2019-11-28: PHP 7.4.0 was released
+
+
+### 2019-01-10: the end of life date for PHP 7.0
+
+PHP 7.0 became an unsupported branch. The last release was 7.0.33.
+
+### 2018-12-31: the end of life date for PHP 5.6
+
+PHP 5.6 became an unsupported branch. The last release was 5.6.40.
+
+### 2018-12-06: PHP 7.3.0 was released
+
+
 ### 2017-11-30: PHP 7.2.0 was released
 
 #### Added
