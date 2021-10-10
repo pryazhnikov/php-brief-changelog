@@ -30,6 +30,36 @@ PHP 5.6 became an unsupported branch. The last release was 5.6.40.
 
 ### 2018-12-06: PHP 7.3.0 was released
 
+#### Added
+
+* Added support for references in `list()` and array destructuring ([RFC](https://wiki.php.net/rfc/list_reference_assignment)).
+* Trailing commas in function and method calls are now allowed.
+* Added support for the SameSite cookie directive.
+* Added `array_key_first()` & `array_key_last()` functions.
+* Added `is_countable()` function.
+* Added `hrtime()` function to get high resolution time.
+
+#### Changed
+
+* Implemented flexible heredoc and nowdoc syntax ([RFC](https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes)).
+* The Multibyte String data tables have been updated for Unicode 11.
+* Performance of the Multibyte String extension has been significantly improved across the board.
+* The PCRE extension has been upgraded to PCRE2, which may cause minor behavioral changes ([RFC](https://wiki.php.net/rfc/pcre2-migration)).
+* If an SPL autoloader throws an exception, following autoloaders will not be executed. Previously all autoloaders were executed and exceptions were chained.
+* The cyclic GC has been enhanced, which may result in considerable performance improvements.
+
+#### Deprecated
+
+* The declaration and use of case-insensitive constants has been deprecated.
+* Declaring a function called `assert()` inside a namespace is deprecated.
+
+#### Fixed
+
+* `mysqli` & `pdo_mysql` extensions: prepared statements now properly report the fractional seconds for `DATETIME`, `TIME` and `TIMESTAMP` columns with decimals specifier (e.g. `TIMESTAMP(6)` when using microseconds). Formerly, the fractional seconds part was simply omitted from the returned values.
+
+#### Security
+
+* As of PHP 7.3.23, the names of incoming cookies are no longer url-decoded for security reasons.
 
 ### 2017-11-30: PHP 7.2.0 was released
 
