@@ -19,6 +19,37 @@ PHP 7.1 became an unsupported branch. The last release was 7.1.33.
 
 ### 2019-11-28: PHP 7.4.0 was released
 
+#### Added
+
+* Added FFI: a new extension, which provides a simple way to call native functions, access native variables, and create/access data structures defined in C libraries. ([documentation](https://www.php.net/manual/en/book.ffi.php))
+* Typed properties
+* Arrow functions ([documentation](https://www.php.net/manual/en/functions.arrow.php))
+* Null coalescing assignment operator
+  
+  Usage example: `$array['key'] ??= computeDefault();`
+* Unpacking inside arrays
+* Numeric literal separator (value example: `1_000_000`)
+* Weak references ([documentation](https://www.php.net/manual/en/class.weakreference.php))
+* Added the `mb_str_split()` function, which provides the same functionality as str_split(), but operating on code points rather than bytes.
+
+#### Changed
+
+* Trying to use values of type `null`, `bool`, `int`, `float` or resource as an array (such as `$null["key"]`) will now generate a notice.
+* `fn` is now a reserved keyword. In particular, it can no longer be used as a function or class name. It can still be used as a method or class constant name.
+
+#### Deprecated
+
+* Curly brace syntax for accessing array elements and string offsets is deprecated ([RFC](https://wiki.php.net/rfc/deprecate_curly_braces_array_access))
+* `(real)` cast and `is_real()` function are deprecated.
+  
+  Use `(float)` and `is_float()` instead.
+* The `money_format()` function is deprecated. It can be replaced by the intl `NumberFormatter` functionality.
+* Nested ternary operations must explicitly use parentheses to dictate the order of the operations.
+
+#### Security
+ in case of vulnerabilities.
+
+* As of PHP 7.4.11, the _names_ of incoming cookies are no longer url-decoded for security reasons.
 
 ### 2019-01-10: the end of life date for PHP 7.0
 
