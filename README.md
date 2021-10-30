@@ -47,7 +47,6 @@ PHP 7.1 became an unsupported branch. The last release was 7.1.33.
 * Nested ternary operations must explicitly use parentheses to dictate the order of the operations.
 
 #### Security
- in case of vulnerabilities.
 
 * As of PHP 7.4.11, the _names_ of incoming cookies are no longer url-decoded for security reasons.
 
