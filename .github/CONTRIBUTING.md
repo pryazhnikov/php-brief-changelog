@@ -21,3 +21,11 @@ See https://keepachangelog.com/en/1.0.0/
 
 #### Security
  in case of vulnerabilities.
+
+## How to update calendar
+
+You can extract all events from README file using this shell command:
+
+```shell
+grep -e '^### 2' README.md | sed -e 's/###/\*/'
+```
