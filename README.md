@@ -24,6 +24,43 @@ PHP 7.2 became an unsupported branch. The last release was 7.2.34.
 
 ### 2020-11-26: PHP 8.0.0 was released
 
+#### Added
+
+* Named arguments ([RFC](https://wiki.php.net/rfc/named_params))
+
+    Usage example: `htmlspecialchars($string, double_encode: false);`
+* Attributes: a way to add structured metadata with PHP's native syntax ([RFC](https://wiki.php.net/rfc/attributes_v2), [documentation](https://www.php.net/manual/en/language.attributes.php))
+* Constructor property promotion: less boilerplate code to define and initialize properties ([RFC](https://wiki.php.net/rfc/constructor_promotion), [documentation](https://www.php.net/manual/en/language.oop5.decon.php#language.oop5.decon.constructor.promotion))
+* Union types: native type declarations that are validated at runtime instead of PHPDoc annotations ([RFC](https://wiki.php.net/rfc/union_types_v2), [documentation](https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.union))
+* Match expression ([RFC](https://wiki.php.net/rfc/match_expression_v2), [documentation](https://www.php.net/manual/en/control-structures.match.php))
+* Nullsafe operator `?->` ([RFC](https://wiki.php.net/rfc/nullsafe_operator))
+
+#### Changed
+
+* Saner string to number comparisons ([RFC](https://wiki.php.net/rfc/string_to_number_comparison))
+* Consistent type errors for internal functions: most of the internal functions now throw an Error exception if the validation of the parameters fails ([RFC](https://wiki.php.net/rfc/consistent_type_errors))
+* Stricter type checks for arithmetic/bitwise operators
+* Fatal error for incompatible method signatures ([RFC](https://wiki.php.net/rfc/lsp_errors))
+
+#### Deprecated
+
+* If a parameter with a default value is followed by a required parameter, the default value has no effect.
+* Sort comparison functions that return `true` or `false` will now throw a deprecation warning, and should be replaced with an implementation that returns an integer less than, equal to, or greater than zero.
+
+#### Removed
+for now removed features.
+
+#### Fixed
+for any bug fixes.
+
+#### Security
+in case of vulnerabilities.
+
+#### See also
+
+* [PHP 8.0.0 Release Announcement](https://www.php.net/releases/8.0/en.php)
+* [Migrating from PHP 7.4.x to PHP 8.0.x](https://www.php.net/manual/en/migration80.php)
+* [PHP 8 ChangeLog](https://www.php.net/ChangeLog-8.php#PHP_8_0)
 
 ### 2019-12-01: the end of life date for PHP 7.1
 
@@ -216,11 +253,20 @@ PHP 5.0 became an unsupported branch. The last release was 5.0.5.
 
 ### 2004-07-13: PHP 5.0.0 was released
 
+_______________
+
 ## Data Sources
 
-* http://php.net/releases/
-* http://php.net/supported-versions.php
+Feature related sources:
 * http://php.net/manual/en/appendices.php
+* https://www.php.net/releases/8.2/en.php
+* https://www.php.net/releases/8.1/en.php
+* https://www.php.net/releases/8.0/en.php
+* https://www.php.net/ChangeLog-8.php
 * http://php.net/ChangeLog-7.php
 * http://php.net/ChangeLog-5.php
+
+Date related sources:
+* http://php.net/releases/
+* http://php.net/supported-versions.php
 * http://php.net/eol.php
