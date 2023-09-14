@@ -16,7 +16,7 @@ PHP 7.3 became an unsupported branch. The last release was 7.4.33.
 
 PHP 7.3 became an unsupported branch. The last release was 7.3.33.
 
-### 2020-11-25: PHP 8.1.0 was released
+### 2021-11-25: PHP 8.1.0 was released
 
 ### 2020-11-30: the end of life date for PHP 7.2
 
