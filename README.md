@@ -47,15 +47,6 @@ PHP 7.2 became an unsupported branch. The last release was 7.2.34.
 * If a parameter with a default value is followed by a required parameter, the default value has no effect.
 * Sort comparison functions that return `true` or `false` will now throw a deprecation warning, and should be replaced with an implementation that returns an integer less than, equal to, or greater than zero.
 
-#### Removed
-for now removed features.
-
-#### Fixed
-for any bug fixes.
-
-#### Security
-in case of vulnerabilities.
-
 #### See also
 
 * [PHP 8.0.0 Release Announcement](https://www.php.net/releases/8.0/en.php)
